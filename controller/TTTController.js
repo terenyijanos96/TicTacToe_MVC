@@ -10,11 +10,15 @@ class TTTController {
     this.infoView = new InfoView($(".info"))
 
     $(window).on("elemKivalaszt", (event) => {
-      //console.log(event.detail);
       //itt hívom meg a modellt és megkérem, hogy számolja ki, hogy ki következik
-      let ertek = this.tttModel.aktualJatekos();
+      let aktObj = event.detail
+
+      console.log(aktObj)
+      let index = aktObj.index
+
+      let ertek = this.tttModel.aktualisAllapot(index);
       let kiKovetkezik = this.tttModel.kovetkezoJatekos()
-      event.detail.setErtek(ertek);
+      aktObj.setErtek(ertek);
       this.infoView.setPelem(kiKovetkezik)
 
     });

@@ -7,7 +7,7 @@ class Jatekter {
     $(":root").css("--meret", this.n);
 
     for (let index = 0; index < this.n * this.n; index++) {
-      new Elem(szuloElem);
+      new Elem(szuloElem, index);
     }
 
 

@@ -1,8 +1,9 @@
 class Elem {
   /* az osztályban az addataokon végezzük a műveleteket! */
   /*  megjelenítse az oldalon az elemet */
-  constructor(szuloElem) {
+  constructor(szuloElem, index) {
     /* beállítja az addattagokat */
+    this.index = index
     this.allapot = true;
     this.szuloElem = szuloElem;
     this.#htmlOsszeallit(); /* this - a konkrét osztálypéldányra mutat */
